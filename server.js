@@ -6,14 +6,8 @@ import bodyParser from "body-parser";
 import * as crypto from "crypto";
 
 const app = express();
-const corsOptions = {
-  origin: '*',
-  credentials: true,
-  'Access-Control-Allow-Origin': true,
-  allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
-};
-app.use(cors(corsOptions));
-//app.use(cors());
+
+app.use(cors());
 app.use(
   bodyParser.json({
     type(req) {
